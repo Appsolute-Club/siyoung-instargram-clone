@@ -14,6 +14,7 @@ struct HomeView: View {
     }
     
     @State private var items: [Item]
+    @State private var showingCommentView = false
     
     let texts: [String]
     let username: [String]
@@ -36,6 +37,7 @@ struct HomeView: View {
                                     .frame(width: 80, height: 80)
                                 Text(text.capitalized)
                                     .font(.headline)
+                                }
                             }
                         }
                     }
@@ -72,6 +74,9 @@ struct HomeView: View {
                                     .font(.headline)
                                 Spacer()
                                 Image(systemName: "text.bubble")
+                                    .onTapGesture {
+                                        showingCommentView = true
+                                    }
                                 Text("0")
                                 Spacer()
                             }
@@ -83,7 +88,9 @@ struct HomeView: View {
                     }
                     .padding()
                 }
+                .sheet(isPresented: $showingCommentView) {
+                    CommentView()
+                }
             }
         }
     }
-}

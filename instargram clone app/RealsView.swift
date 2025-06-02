@@ -75,4 +75,3 @@ struct PagingScrollView<Content: View>: View {
 #Preview {
     RealsView()
 }
-// 기술과 협업을 통해 가치를 만드는 사람이 되고 싶습니다

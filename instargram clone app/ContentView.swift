@@ -26,7 +26,7 @@ struct ContentView: View {
                     }
                 UpLoadView()
                     .tabItem {
-                        Image(systemName: "plus.circle")
+                        Image(systemName: "plus.square")
                     }
                 SearchView()
                     .tabItem{
@@ -44,4 +44,6 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .presentationDragIndicator(.visible)
+        .presentationDetents([.medium])
 }
