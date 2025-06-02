@@ -24,6 +24,10 @@ struct ContentView: View {
                     .tabItem{
                         Image(systemName: "movieclapper.fill")
                     }
+                UpLoadView()
+                    .tabItem {
+                        Image(systemName: "plus.circle")
+                    }
                 SearchView()
                     .tabItem{
                         Image(systemName: "magnifyingglass")
