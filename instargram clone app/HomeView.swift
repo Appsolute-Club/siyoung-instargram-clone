@@ -90,6 +90,8 @@ struct HomeView: View {
                 }
                 .sheet(isPresented: $showingCommentView) {
                     CommentView()
+                        .presentationDragIndicator(.visible)
+                        .presentationDetents([.fraction(0.45)]) 
                 }
             }
         }

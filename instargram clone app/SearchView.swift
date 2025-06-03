@@ -16,7 +16,7 @@ struct SearchView: View {
                     .frame(width: 300, height: 50)
                 ForEach(0..<88) { _ in
                     HStack(alignment:.center) {
-                        ForEach(0..<5) { _ in
+                        ForEach(0..<3) { _ in
                             VStack{
                                 RoundedRectangle(cornerRadius: 10)
                                     .fill(Color.gray)
@@ -29,8 +29,7 @@ struct SearchView: View {
         }
         .onAppear {
             UIScrollView.appearance().isPagingEnabled = false
-
-        }
+            }
     }
 }
 

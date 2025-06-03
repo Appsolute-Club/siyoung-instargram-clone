@@ -8,11 +8,31 @@
 import SwiftUI
 
 struct UpLoadView: View {
+    @State private var openPhoto = false
+    @State private var image = UIImage()
+
     var body: some View {
         VStack {
-            Text("select File")
-            Text("File...")
-                .foregroundColor(.blue)
+            Text("Select File")
+                .font(.title)
+
+            if image.size.width != 0 {
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 200)
+                    .padding()
+            }
+
+            Button(action: {
+                self.openPhoto = true
+            }) {
+                Text("file...")
+                    .padding()
+            }
+        }
+        .sheet(isPresented: $openPhoto) {
+            ImagePicker(sourceType: .photoLibrary, selectedImage: $image)
         }
     }
 }
