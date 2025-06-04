@@ -34,7 +34,7 @@ struct ContentView: View {
                     }
                 ProfileView()
                     .tabItem{
-                        Image(systemName: "person")
+                        Image(systemName: "person.circle")
                     }
             }
             .navigationTitle(Text("Instagram"))
