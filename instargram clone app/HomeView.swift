@@ -16,6 +16,9 @@ struct HomeView: View {
     @State private var items: [Item]
     @State private var showingCommentView = false
     
+    @State private var showStory = false
+    @State private var selectedStoryIndex = 0
+    
     let texts: [String]
     let username: [String]
     
@@ -35,9 +38,12 @@ struct HomeView: View {
                                 Circle()
                                     .fill(Color.blue.opacity(0.3))
                                     .frame(width: 80, height: 80)
+                                    .onTapGesture {
+                                        selectedStoryIndex = texts.firstIndex(of: text) ?? 0
+                                        showStory = true
+                                    }
                                 Text(text.capitalized)
                                     .font(.headline)
-                                }
                             }
                         }
                     }
@@ -95,4 +101,12 @@ struct HomeView: View {
                 }
             }
         }
+        .sheet(isPresented: $showStory) {
+            StoryUIView(
+                currentIndex: $selectedStoryIndex,
+                titles: texts,
+                title: texts[selectedStoryIndex]
+            )
+        }
     }
+}
