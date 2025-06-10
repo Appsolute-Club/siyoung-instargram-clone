@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let circleTitle: [String] = ["cntmdwn2","ye.hyun__", "Anna", "Jake", "Max", "Lilly", "John", "Emma", "Michael", "Olivia", "David", "Isabella", "Robert", "Ava", "William", "Sophia", "Charles", "Mia", "George", "Harper", "Joseph", "Charlotte", "apple", "banana", "orange", "pineapple", "grape", "mango", "strawberry", "blueberry", "blackberry", "cherry", "kiwi", "lime", "lemon", "avocado", "peach", "plum", "apricot", "nectarine", "clementine", "watermelon","pineapple"]
-    
-    let UserName: [String] = ["ye.hyun__","cntmdwn2","Anna", "Jake", "Max", "Lilly", "John", "Emma", "Michael", "Olivia", "David", "Isabella", "Robert", "Ava", "William", "Sophia", "Charles", "Mia", "George", "Harper", "Joseph", "Charlotte", "apple", "banana", "orange", "pineapple", "grape", "mango", "strawberry", "blueberry", "blackberry", "cherry", "kiwi", "lime", "lemon", "avocado", "peach", "plum", "apricot", "nectarine", "clementine", "watermelon","pineapple"]
+    let circleTitle: [String] = ["cntmdwn2","ye.hyun__", "kimkijoong7777", "Anna", "Jake", "Max", "Lilly", "John", "Emma", "Michael", "Olivia", "David", "Isabella", "Robert", "Ava", "William", "Sophia", "Charles", "Mia", "George", "Harper", "Joseph", "Charlotte", "apple", "banana", "orange", "pineapple", "grape", "mango", "strawberry", "blueberry", "blackberry", "cherry", "kiwi", "lime", "lemon", "avocado", "peach", "plum", "apricot", "nectarine", "clementine", "watermelon","pineapple"]
+        
+        let UserName: [String] = ["ye.hyun__","cntmdwn2","Anna", "Jake", "Max", "Lilly", "John", "Emma", "Michael", "Olivia", "David", "Isabella", "Robert", "Ava", "William", "Sophia", "Charles", "Mia", "George", "Harper", "Joseph", "Charlotte", "apple", "banana", "orange", "pineapple", "grape", "mango", "strawberry", "blueberry", "blackberry", "cherry", "kiwi", "lime", "lemon", "avocado", "peach", "plum", "apricot", "nectarine", "clementine", "watermelon","pineapple"]
     
     var body: some View {
         NavigationStack {

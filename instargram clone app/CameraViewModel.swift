@@ -29,7 +29,6 @@ class CameraViewModel: NSObject, ObservableObject {
             DispatchQueue.main.async {
                 if granted {
                     self.setupSession()
-                    self.session.startRunning()
                 } else {
                     print("카메라 권한이 없습니다.")
                 }
@@ -56,6 +55,7 @@ class CameraViewModel: NSObject, ObservableObject {
         }
 
         session.commitConfiguration()
+        session.startRunning()
     }
 
     func switchFlash() {
